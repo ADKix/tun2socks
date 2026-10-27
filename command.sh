@@ -24,4 +24,4 @@ ip link set tun0 up
 ip route del default
 ip route add default dev tun0
 
-exec tun2socks -loglevel warn -device tun0 -proxy "socks5://${USER}:${PASSWORD}@${ADDRESS}:${PORT}"
+exec tun2socks --loglevel warn --device tun0 --proxy "socks5://${USER}:${PASSWORD}@${ADDRESS}:${PORT}"

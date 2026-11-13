@@ -1,9 +1,9 @@
-ARG ALPINE=3.24.3
+ARG ALPINE=3.24.4
 ARG T2S=v2.7.0
 
 FROM alpine:${ALPINE}
 LABEL org.opencontainers.image.authors="Axl <https://github.com/ADKix>"
-RUN apk add -U --no-cache 7zip util-linux-misc iproute2-minimal
+RUN apk add -U --no-cache 7zip iproute2-minimal
 ARG T2S
 ARG TARGETPLATFORM
 WORKDIR "/opt"
